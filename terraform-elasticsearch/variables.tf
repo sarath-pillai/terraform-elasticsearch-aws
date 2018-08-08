@@ -89,15 +89,11 @@ variable "environment_name" {
 }
 
 variable "aws_security_gids" {
-  default     = ""
+  default     = []
   description = "Security Group IDs that will be assigned to elasticsearch cluster"
-  type        = "list"
 }
 
 variable "subnet_ids" {
-  default     = ""
+  default     = []
   description = "Subnet Ids in the vpc for elasticsearch cluster"
-  type        = "list"
 }
-
- 

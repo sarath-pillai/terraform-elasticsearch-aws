@@ -1,0 +1,22 @@
+module "es" {
+  source = "github.com/sarath-pillai/terraform-elasticsearch-aws/terraform-elasticsearch"
+  domain                                  = "${var.domain}"
+  region                                  = "${var.region}"
+  elasticsearch_version                   = "${var.elasticsearch_version}"
+  data_node_type                          = "${var.data_node_type}"
+  data_instance_count                     = "${var.data_instance_count}"
+  dedicated_master                        = "${var.dedicated_master}"
+  dedicated_master_count                  = "${var.dedicated_master_count}"
+  zone_awareness                          = "${var.zone_awareness}"
+  rest_action_multi_allow_explicit_index  = "${var.rest_action_multi_allow_explicit_index}"
+  indices_fielddata_cache_size            = "${var.indices_fielddata_cache_size}"
+  indices_query_bool_max_clause_count     = "${var.indices_query_bool_max_clause_count}"
+  ebs_enabled                             = "${var.ebs_enabled}"
+  volume_type                             = "${var.volume_type}"
+  volume_size                             = "${var.volume_size}"
+  automated_snapshot_start_hour           = "${var.automated_snapshot_start_hour}"
+  environment_name                        = "${var.environment_name}"
+  aws_security_gids                       = "${var.aws_security_gids}"
+  subnet_ids                              = "${var.subnet_ids}"
+}
+  
