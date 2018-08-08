@@ -53,7 +53,7 @@ variable "zone_awareness" {
 }
 
 variable "rest_action_multi_allow_explicit_index" {
-  default     = "true"
+  default     = true
   description = "Advanced Options for permitting Rest Actions"
   type        = "string"
 }
