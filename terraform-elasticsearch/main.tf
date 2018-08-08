@@ -1,3 +1,7 @@
+resource "aws_iam_service_linked_role" "es" {
+  aws_service_name = "es.amazonaws.com"
+}
+
 resource "aws_elasticsearch_domain" "es" {
   domain_name           = "${var.domain}"
   elasticsearch_version = "${var.elasticsearch_version}"
@@ -29,4 +33,5 @@ resource "aws_elasticsearch_domain" "es" {
     security_group_ids = ["${var.aws_security_gids}"]
     subnet_ids         = ["${var.subnet_ids}"]
   }
+  depends_on = ["aws_iam_service_linked_role.es"]
 }
