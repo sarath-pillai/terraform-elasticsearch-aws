@@ -25,4 +25,8 @@ resource "aws_elasticsearch_domain" "es" {
   tags {
     Environment = "${var.environment_name}"
   }
+  vpc_options {
+    security_group_ids = ["${var.aws_security_gids}"]
+    subnet_ids         = ["${var.subnet_ids}"]
+  }
 }
