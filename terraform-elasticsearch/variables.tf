@@ -10,6 +10,12 @@ variable "region" {
   type        = "string"
 }
 
+variable "dedicated_master_type" {
+  default     = "t2.small.elasticsearch"
+  description = "Dedicated Master Instance Type"
+  type        = "string"
+}
+
 variable "elasticsearch_version" {
   default     = "6.2"
   description = "Elastic Search Version"
