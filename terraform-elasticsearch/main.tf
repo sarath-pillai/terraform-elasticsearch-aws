@@ -7,7 +7,7 @@ resource "aws_elasticsearch_domain" "es" {
     dedicated_master_enabled = "${var.dedicated_master}"
     dedicated_master_type = "${var.dedicated_master_type}"
     dedicated_master_count = "${var.dedicated_master_count}"
-    zone_awareness = "${var.zone_awareness}"
+    zone_awareness_enabled = "${var.zone_awareness}"
   }
   advanced_options {
     "rest.action.multi.allow_explicit_index" = "${var.rest_action_multi_allow_explicit_index}"
